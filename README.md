@@ -6,7 +6,7 @@
 
 Welcome to the SMART-AFM Image Analysis Tutorial! Here you’ll find a guide for turning your raw AFM scans into quantitative cellulose nanocrystal measurements. By the end, you’ll have all the tools and confidence to customize SMART-AFM for your own samples and generate results.
 
-This tutorial provides a complete, step-by-step guide to using SMART-AFM for automated AFM image analysis. We begin by introducing the SMART-AFM framework [1. What is SMART-AFM?](#1-what-is-smart-afm) and then walk you through getting started [2. Getting Started](#2-getting-started) —from installing prerequisites and preparing your AFM data, to downloading the repository and setting it up. Next, you’ll learn how to define all pipeline settings in `defineParams.m`, before running the full SMART-AFM workflow on your image set [3. Running SMART-AFM](#3-running-smart-afm). We then explore the structured outputs you’ll find under `outputs/`in [4. Result Structure in `outputs`](#4-result-structure-in-outputs) —including preprocessed images, segmented overlays, grouped­ images, quantitative measurements, and image metadata. Finally, we cover parameter tuning and customization tips [5. Customization and Parameter Tuning](#5-customization-and-parameter-tuning),  troubleshooting [6. Troubleshooting Tips](#6-troubleshooting-tips), and a FAQ [FAQs](#faqs) to answer common questions.
+This tutorial provides a complete, step-by-step guide to using SMART-AFM for automated AFM image analysis. We begin by introducing the SMART-AFM framework [1. What is SMART-AFM?](#1-what-is-smart-afm) and then walk you through getting started [2. Getting Started](#2-getting-started) —from installing prerequisites and preparing your AFM data, to downloading the repository and setting it up. Next, you’ll learn how to define all pipeline settings in `defineParams.m`, before running the full SMART-AFM workflow on your image set [3. Running SMART-AFM](#3-running-smart-afm). We then explore the structured outputs you’ll find under `outputs/`in [4. Result Structure in `outputs`](#4-result-structure) —including preprocessed images, segmented overlays, grouped­ images, quantitative measurements, and image metadata. Finally, we cover parameter tuning and customization tips [5. Customization and Parameter Tuning](#5-customization-and-parameter-tuning),  troubleshooting [6. Troubleshooting Tips](#6-troubleshooting-tips), and a FAQ [FAQs](#faqs) to answer common questions.
 
 For bugs or feature requests, open an issue in the repository or email repository maintainer.
 
@@ -120,7 +120,7 @@ All pipeline parameters are defined in a file called `defineParams.m` within 
 - **`params.group.*`** holds grouping thresholds,
 - and so on.
 
-This naming convention keeps the pipeline modular—each processing stage reads only the `params` fields it needs. The values in `defineParams.m` are the defaults used in the SMART-AFM publication—adjusting them for a given image set is recommended. For full details on why each parameter was chosen, please refer to the SMART-AFM paper. A later discussion and practical recommendation on parameter selection is given in [5. Customization and Parameter Tuning](https://www.notion.so/5-Customization-and-Parameter-Tuning-2098559081c380bb8d77e29e5ff6ca58?pvs=21).
+This naming convention keeps the pipeline modular—each processing stage reads only the `params` fields it needs. The values in `defineParams.m` are the defaults used in the SMART-AFM publication—adjusting them for a given image set is recommended. For full details on why each parameter was chosen, please refer to the SMART-AFM paper. A later discussion and practical recommendation on parameter selection is given in [5. Customization and Parameter Tuning](#5-customization-and-parameter-tuning).
 
 **⚠️ IMPORTANT**: You *must* set your raw image dimensions before running SMART. In `defineParams.m`, specify:
 
@@ -166,7 +166,7 @@ As SMART is running, time taken to process images is reported, as well as a prog
 
 Live cumulative average length and height measurements as each image is processed.
 
-# 4. Result Structure in `outputs`
+# 4. Result Structure
 
 When you run `runSmartAfm`, the code builds an `outputs/` folder under your project root with a structure as follows:
 
