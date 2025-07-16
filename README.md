@@ -6,7 +6,7 @@
 
 Welcome to the SMART-AFM Image Analysis Tutorial! Here you’ll find a guide for turning your raw AFM scans into quantitative cellulose nanocrystal measurements. By the end, you’ll have all the tools and confidence to customize SMART-AFM for your own samples and generate results.
 
-This tutorial provides a complete, step-by-step guide to using SMART-AFM for automated AFM image analysis. We begin by introducing the SMART-AFM framework [1. What is SMART-AFM?](https://www.notion.so/1-What-is-SMART-AFM-2178559081c38068979ade050be593cc?pvs=21) and then walk you through getting started [2. Getting Started](https://www.notion.so/2-Getting-Started-2108559081c3806a8e41da18b00aca5e?pvs=21) —from installing prerequisites and preparing your AFM data, to downloading the repository and setting it up. Next, you’ll learn how to define all pipeline settings in `defineParams.m`, before running the full SMART-AFM workflow on your image set [3. Running SMART-AFM](https://www.notion.so/3-Running-SMART-AFM-2098559081c380398fcee33894975721?pvs=21). We then explore the structured outputs you’ll find under `outputs/`in [4. Result Structure in `outputs`](https://www.notion.so/4-Result-Structure-in-outputs-2098559081c380099d6fd2bf560671f5?pvs=21) —including preprocessed images, segmented overlays, grouped­ images, quantitative measurements, and image metadata. Finally, we cover parameter tuning and customization tips [5. Customization and Parameter Tuning](https://www.notion.so/5-Customization-and-Parameter-Tuning-2098559081c380bb8d77e29e5ff6ca58?pvs=21),  troubleshooting [6. Troubleshooting Tips](https://www.notion.so/6-Troubleshooting-Tips-21a8559081c3806387a0fc38231095dc?pvs=21), and a concise FAQ [FAQs](https://www.notion.so/FAQs-2098559081c3806f81bece39c67f82c3?pvs=21) to answer common questions.
+This tutorial provides a complete, step-by-step guide to using SMART-AFM for automated AFM image analysis. We begin by introducing the SMART-AFM framework [1. What is SMART-AFM?](https://www.notion.so/1-What-is-SMART-AFM-2178559081c38068979ade050be593cc?pvs=21) and then walk you through getting started [2. Getting Started](https://www.notion.so/2-Getting-Started-2108559081c3806a8e41da18b00aca5e?pvs=21) —from installing prerequisites and preparing your AFM data, to downloading the repository and setting it up. Next, you’ll learn how to define all pipeline settings in `defineParams.m`, before running the full SMART-AFM workflow on your image set [3. Running SMART-AFM](https://www.notion.so/3-Running-SMART-AFM-2098559081c380398fcee33894975721?pvs=21). We then explore the structured outputs you’ll find under `outputs/`in [4. Result Structure in `outputs`](https://www.notion.so/4-Result-Structure-in-outputs-2098559081c380099d6fd2bf560671f5?pvs=21) —including preprocessed images, segmented overlays, grouped­ images, quantitative measurements, and image metadata. Finally, we cover parameter tuning and customization tips [5. Customization and Parameter Tuning](https://www.notion.so/5-Customization-and-Parameter-Tuning-2098559081c380bb8d77e29e5ff6ca58?pvs=21),  troubleshooting [6. Troubleshooting Tips](https://www.notion.so/6-Troubleshooting-Tips-21a8559081c3806387a0fc38231095dc?pvs=21), and a FAQ [FAQs](https://www.notion.so/FAQs-2098559081c3806f81bece39c67f82c3?pvs=21) to answer common questions.
 
 For bugs or feature requests, open an issue in the repository or email repository maintainer.
 
@@ -25,7 +25,7 @@ For bugs or feature requests, open an issue in the repository or email repositor
 
 SMART-AFM is an end-to-end, automated framework for converting raw AFM height maps into reliable, quantitative measurements of cellulose nanocrystals. It is built around a series of modular steps: first, **pre-processing** enhances the contrast and noise levels of the images, as well as addressing certain AFM imaging artifacts; next, **segmentation** distinguishes particles from background; **grouping** classifies each connected component as a border particle, coarse cluster, lateral (side-by-side) bundle, vertical stack, or isolated CNC based on shape and geometry criteria; and finally, **measurement** extracts dimensional data for particles. By automating every stage while still allowing parameter tuning, SMART-AFM delivers reproducible, high-throughput analysis and eliminates much of the time and subjectivity inherent in manual AFM image analysis.
 
-![SMART-AFM Workflow. ](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/image.png)
+![SMART-AFM Workflow. ](assets/image.png)
 
 SMART-AFM Workflow. 
 
@@ -158,11 +158,11 @@ That single command will:
 - Preprocess, segment, refine, group, and measure CNCs, as explained in detail in the paper, while displaying cumulative average statistic of processed images online, and
 - Save results in `outputs/` .
 
-![As SMART is running, time taken to process images is reported, as well as a progress bar.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-21_at_7.42.12_PM.png)
+![As SMART is running, time taken to process images is reported, as well as a progress bar.](assets/Screenshot_2025-06-21_at_7.42.12_PM.png)
 
 As SMART is running, time taken to process images is reported, as well as a progress bar.
 
-![Live cumulative average length and height measurements as each image is processed.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-24_at_4.13.24_AM.png)
+![Live cumulative average length and height measurements as each image is processed.](assets/Screenshot_2025-06-24_at_4.13.24_AM.png)
 
 Live cumulative average length and height measurements as each image is processed.
 
@@ -210,19 +210,19 @@ PNGs of binary segmented images, i.e., CNC pixels separated from non-CNC pixels 
 
 PNGs of raw images overlaid with colored boundaries by group (`<name>_grouped.png`) with color reference below. 
 
-![Example of a raw image.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-19_at_12.06.07_AM.png)
+![Example of a raw image.](assets/Screenshot_2025-06-19_at_12.06.07_AM.png)
 
 Example of a raw image.
 
-![The grayscale, preprocessed image.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/1004_height_preprocessed.png)
+![The grayscale, preprocessed image.](assets/1004_height_preprocessed.png)
 
 The grayscale, preprocessed image.
 
-![The segmented image.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/1004_height_segmented-2.png)
+![The segmented image.](assets/1004_height_segmented-2.png)
 
 The segmented image.
 
-![Image with segmentation overlays with grouping-specific colors.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/1004_height_segmented.png)
+![Image with segmentation overlays with grouping-specific colors.](assets/1004_height_segmented.png)
 
 Image with segmentation overlays with grouping-specific colors.
 
@@ -251,27 +251,27 @@ green: isolated
     - `<group>_measurements.csv` — per‑particle metrics for that group. The length, height, aspect ratio, solidity (ratio of the pixels in the convex hull that are also in the object), 3D area, 2D area, and group assignment.
     - `<group>_<size metric>_hist.png` and `<group>_<size metric>_heatmap.png` — PNG figures: length, height, aspect ratio histograms and a 2D heatmap of length vs. height.
 
-![Purple line reflects particle’s ***length***. ***Area 2D*** is the area of the pixels inside the green boundary.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/area2.png)
+![Purple line reflects particle’s ***length***. ***Area 2D*** is the area of the pixels inside the green boundary.](assets/area2.png)
 
 Purple line reflects particle’s ***length***. ***Area 2D*** is the area of the pixels inside the green boundary.
 
-![A particle in 3D. Purple dots reflect the highest points on the object which are averaged to calculate particle’s ***height***. Object’s ***3D area*** is the surface enclosed by green boundary. ](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/area3.png)
+![A particle in 3D. Purple dots reflect the highest points on the object which are averaged to calculate particle’s ***height***. Object’s ***3D area*** is the surface enclosed by green boundary. ](assets/area3.png)
 
 A particle in 3D. Purple dots reflect the highest points on the object which are averaged to calculate particle’s ***height***. Object’s ***3D area*** is the surface enclosed by green boundary. 
 
-![A particle’s ***solidity*** is the ratio of pixels belonging to the object by the pixels inside object’s convex hull, i.e., pixels inside red area to pixels inside yellow area.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-21_at_7.23.20_PM.png)
+![A particle’s ***solidity*** is the ratio of pixels belonging to the object by the pixels inside object’s convex hull, i.e., pixels inside red area to pixels inside yellow area.](assets/Screenshot_2025-06-21_at_7.23.20_PM.png)
 
 A particle’s ***solidity*** is the ratio of pixels belonging to the object by the pixels inside object’s convex hull, i.e., pixels inside red area to pixels inside yellow area.
 
-![Sample measurement histogram PNG.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/isolated_length_hist.png)
+![Sample measurement histogram PNG.](assets/isolated_length_hist.png)
 
 Sample measurement histogram PNG.
 
-![Sample measurement heat map PNG.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/isolated_length_height_heatmap-2.png)
+![Sample measurement heat map PNG.](assets/isolated_length_height_heatmap-2.png)
 
 Sample measurement heat map PNG.
 
-![Sample measurement summary statistics CSV. (truncated)](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-19_at_1.27.17_AM.png)
+![Sample measurement summary statistics CSV. (truncated)](assets/Screenshot_2025-06-19_at_1.27.17_AM.png)
 
 Sample measurement summary statistics CSV. (truncated)
 
@@ -279,11 +279,11 @@ Sample measurement summary statistics CSV. (truncated)
 
 `image_metadata.csv` — per-image summary metrics (background roughness, noise, contrast, background height, particle counts and total area for each group).
 
-![***Background roughness*** is the 3D surface area of background pixels divided by their projected area. ](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/image%201.png)
+![***Background roughness*** is the 3D surface area of background pixels divided by their projected area. ](assets/image%201.png)
 
 ***Background roughness*** is the 3D surface area of background pixels divided by their projected area. 
 
-![***Background noise*** is defined as the standard deviation of background pixels in a given image. ***Contrast*** is the difference between averages of background and particle pixels in the image. ***Background height*** is the average of an image’s background pixels.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-22_at_11.37.06_AM.png)
+![***Background noise*** is defined as the standard deviation of background pixels in a given image. ***Contrast*** is the difference between averages of background and particle pixels in the image. ***Background height*** is the average of an image’s background pixels.](assets/Screenshot_2025-06-22_at_11.37.06_AM.png)
 
 ***Background noise*** is defined as the standard deviation of background pixels in a given image. ***Contrast*** is the difference between averages of background and particle pixels in the image. ***Background height*** is the average of an image’s background pixels.
 
@@ -364,11 +364,11 @@ A: Ideally, images should have:
 2. High edge contrast (bright CNCs on dark background).
 3. Low background noise (background pixels should have low grayscale variance).
 
-![Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/0603.jpk_height_segmented.png)
+![Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image.](assets/0603.jpk_height_segmented.png)
 
 Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image.
 
-![Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/notgoodafmimage.png)
+![Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)](assets/notgoodafmimage.png)
 
 Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)
 
@@ -402,7 +402,7 @@ writetable(combined, 'all_batches_summary_measurements.csv', 'WriteRowNames', tr
 
 This will produce `all_batches_summary_measurements.csv` ready for any further analysis or plotting.
 
-![Sample `all_batches_summary_measurements.csv` for a 2-batch analysis produced by code excerpt above.](SMART-AFM%20Tutorial%202078559081c3800fa938ce9230759743/Screenshot_2025-06-24_at_1.59.29_PM.png)
+![Sample `all_batches_summary_measurements.csv` for a 2-batch analysis produced by code excerpt above.](assets/Screenshot_2025-06-24_at_1.59.29_PM.png)
 
 Sample `all_batches_summary_measurements.csv` for a 2-batch analysis produced by code excerpt above.
 
