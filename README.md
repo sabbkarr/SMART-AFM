@@ -216,31 +216,31 @@ PNGs of binary segmented images, i.e., CNC pixels separated from non-CNC pixels 
 PNGs of raw images overlaid with colored boundaries by group (`<name>_grouped.png`) with color reference below. 
 <table>
   <tr>
-    <td width="20%" align="center">
+    <td width="20%" align="center" valign="top">
       <img src="assets/Screenshot_2025-06-19_at_12.06.07_AM.png" alt="Example of a raw image." />
       <p>Example of a raw image.</p>
     </td>
-    <td width="20%" align="center">
+    <td width="20%" align="center" valign="top">
       <img src="assets/1004_height_preprocessed.png" alt="The grayscale, preprocessed image." />
       <p>The grayscale, preprocessed image.</p>
     </td>
-    <td width="20%" align="center">
+    <td width="20%" align="center" valign="top">
       <img src="assets/1004_height_segmented-2.png" alt="The segmented image." />
       <p>The segmented image.</p>
     </td>
-    <td width="20%" align="center">
+    <td width="20%" align="center" valign="top">
       <img src="assets/1004_height_segmented.png" alt="Image with segmentation overlays with grouping-specific colors." />
       <p>Image with segmentation overlays with grouping-specific colors.</p>
     </td>
-    <td width="20%" align="left">
+    <td width="20%" align="left" valign="top">
       <aside>
         🎨  
         <strong>Color reference:</strong><br/>
-        Magenta: border<br/>
-        red: coarse clusters<br/>
-        orange: laterally stacked<br/>
-        yellow: vertically stacked<br/>
-        green: isolated
+  	<span style="color:magenta;">Magenta:</span> border<br/>
+  	<span style="color:red;">Red:</span> coarse clusters<br/>
+  	<span style="color:orange;">Orange:</span> laterally stacked<br/>
+  	<span style="color:yellow;">Yellow:</span> vertically stacked<br/>
+  	<span style="color:green;">Green:</span> isolated
       </aside>
     </td>
   </tr>
@@ -254,29 +254,36 @@ PNGs of raw images overlaid with colored boundaries by group (`<name>_grouped.pn
     - `<group>_measurements.csv` — per‑particle metrics for that group. The length, height, aspect ratio, solidity (ratio of the pixels in the convex hull that are also in the object), 3D area, 2D area, and group assignment.
     - `<group>_<size metric>_hist.png` and `<group>_<size metric>_heatmap.png` — PNG figures: length, height, aspect ratio histograms and a 2D heatmap of length vs. height.
 
-![Purple line reflects particle’s ***length***. ***Area 2D*** is the area of the pixels inside the green boundary.](assets/area2.png)
-
-Purple line reflects particle’s ***length***. ***Area 2D*** is the area of the pixels inside the green boundary.
-
-![A particle in 3D. Purple dots reflect the highest points on the object which are averaged to calculate particle’s ***height***. Object’s ***3D area*** is the surface enclosed by green boundary. ](assets/area3.png)
-
-A particle in 3D. Purple dots reflect the highest points on the object which are averaged to calculate particle’s ***height***. Object’s ***3D area*** is the surface enclosed by green boundary. 
-
-![A particle’s ***solidity*** is the ratio of pixels belonging to the object by the pixels inside object’s convex hull, i.e., pixels inside red area to pixels inside yellow area.](assets/Screenshot_2025-06-21_at_7.23.20_PM.png)
-
-A particle’s ***solidity*** is the ratio of pixels belonging to the object by the pixels inside object’s convex hull, i.e., pixels inside red area to pixels inside yellow area.
-
-![Sample measurement histogram PNG.](assets/isolated_length_hist.png)
-
-Sample measurement histogram PNG.
-
-![Sample measurement heat map PNG.](assets/isolated_length_height_heatmap-2.png)
-
-Sample measurement heat map PNG.
-
-![Sample measurement summary statistics CSV. (truncated)](assets/Screenshot_2025-06-19_at_1.27.17_AM.png)
-
-Sample measurement summary statistics CSV. (truncated)
+<table>
+  <tr>
+    <td width="33.33%" align="center" valign="top">
+      <img src="assets/area2.png" alt="Purple line reflects particle’s length. Area 2D is the area of the pixels inside the green boundary." />
+      <p>Purple line reflects particle’s <strong><em>length</em></strong>. <strong><em>Area 2D</em></strong> is the area of the pixels inside the green boundary.</p>
+    </td>
+    <td width="33.33%" align="center" valign="top">
+      <img src="assets/area3.png" alt="A particle in 3D. Purple dots reflect the highest points, averaged to calculate height. 3D area is the surface enclosed by green boundary." />
+      <p>A particle in 3D. Purple dots reflect the highest points on the object which are averaged to calculate particle’s <strong><em>height</em></strong>. Object’s <strong><em>3D area</em></strong> is the surface enclosed by green boundary.</p>
+    </td>
+    <td width="33.33%" align="center" valign="top">
+      <img src="assets/Screenshot_2025-06-21_at_7.23.20_PM.png" alt="A particle’s solidity is the ratio of pixels in object versus its convex hull." />
+      <p>A particle’s <strong><em>solidity</em></strong> is the ratio of pixels belonging to the object to the pixels inside the object’s convex hull.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="assets/isolated_length_hist.png" alt="Sample measurement histogram PNG." />
+      <p>Sample measurement histogram PNG.</p>
+    </td>
+    <td width="30%" align="center" valign="top">
+      <img src="assets/isolated_length_height_heatmap-2.png" alt="Sample measurement heat map PNG." />
+      <p>Sample measurement heat map PNG.</p>
+    </td>
+    <td width="40%" align="center" valign="top">
+      <img src="assets/Screenshot_2025-06-19_at_1.27.17_AM.png" alt="Sample measurement summary statistics CSV (truncated)." />
+      <p>Sample measurement summary statistics CSV. (truncated)</p>
+    </td>
+  </tr>
+</table>
 
 ## 4.5. `outputs/image_metadata/`
 
