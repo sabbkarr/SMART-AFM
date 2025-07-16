@@ -166,6 +166,9 @@ As SMART is running, time taken to process images is reported, as well as a prog
 
 Live cumulative average length and height measurements as each image is processed.
 
+| **That single command will:**<br><ul style="padding-left:1em; margin:0"><li>Load every file from <code>data/</code></li><li>Preprocess, segment, refine, group, and measure CNCs, as explained in detail in the paper, while displaying cumulative average statistic of processed images online</li><li>Save results in <code>outputs/</code></li></ul> | ![](assets/Screenshot_2025-06-21_at_7.42.12_PM.png)<br>*As SMART is running, time taken to process images is reported, as well as a progress bar.* | ![](assets/Screenshot_2025-06-24_at_4.13.24_AM.png)<br>*Live cumulative average length and height measurements as each image is processed.* |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
+
 # 4. Result Structure
 
 When you run `runSmartAfm`, the code builds an `outputs/` folder under your project root with a structure as follows:
