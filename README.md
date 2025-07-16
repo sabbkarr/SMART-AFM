@@ -289,13 +289,18 @@ PNGs of raw images overlaid with colored boundaries by group (`<name>_grouped.pn
 
 `image_metadata.csv` — per-image summary metrics (background roughness, noise, contrast, background height, particle counts and total area for each group).
 
-![***Background roughness*** is the 3D surface area of background pixels divided by their projected area. ](assets/image%201.png)
-
-***Background roughness*** is the 3D surface area of background pixels divided by their projected area. 
-
-![***Background noise*** is defined as the standard deviation of background pixels in a given image. ***Contrast*** is the difference between averages of background and particle pixels in the image. ***Background height*** is the average of an image’s background pixels.](assets/Screenshot_2025-06-22_at_11.37.06_AM.png)
-
-***Background noise*** is defined as the standard deviation of background pixels in a given image. ***Contrast*** is the difference between averages of background and particle pixels in the image. ***Background height*** is the average of an image’s background pixels.
+<table>
+  <tr>
+    <td width="35%" align="center" valign="top">
+      <img src="assets/image%201.png" alt="Background roughness is the 3D surface area of background pixels divided by their projected area." />
+      <p><strong>Background roughness</strong> is the 3D surface area of background pixels divided by their projected area.</p>
+    </td>
+    <td width="35%" align="center" valign="top">
+      <img src="assets/Screenshot_2025-06-22_at_11.37.06_AM.png" alt="Background noise, contrast, and background height definitions." />
+      <p><strong>Background noise</strong> is defined as the standard deviation of background pixels in a given image. <strong>Contrast</strong> is the difference between averages of background and particle pixels in the image. <strong>Background height</strong> is the average of an image’s background pixels.</p>
+    </td>
+  </tr>
+</table>
 
 # 5. Customization and Parameter Tuning
 
@@ -374,13 +379,18 @@ A: Ideally, images should have:
 2. High edge contrast (bright CNCs on dark background).
 3. Low background noise (background pixels should have low grayscale variance).
 
-![Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image.](assets/0603.jpk_height_segmented.png)
-
-Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image.
-
-![Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)](assets/notgoodafmimage.png)
-
-Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)
+<table>
+  <tr>
+    <td width="35%" align="center" valign="top">
+      <img src="assets/0603.jpk_height_segmented.png" alt="Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image." />
+      <p>Example 1: a low-noise, high contrast, low artifact image. SMART performs well on this image.</p>
+    </td>
+    <td width="35%" align="center" valign="top">
+      <img src="assets/notgoodafmimage.png" alt="Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)" />
+      <p>Example 2: SMART’s image segmentation and grouping is negatively impacted with artifacts present. (bright horizontal streak artifacts)</p>
+    </td>
+  </tr>
+</table>
 
 **Q8: How can SMART-AFM perform multi-batch analysis?**
 
@@ -412,9 +422,13 @@ writetable(combined, 'all_batches_summary_measurements.csv', 'WriteRowNames', tr
 
 This will produce `all_batches_summary_measurements.csv` ready for any further analysis or plotting.
 
-![Sample `all_batches_summary_measurements.csv` for a 2-batch analysis produced by code excerpt above.](assets/Screenshot_2025-06-24_at_1.59.29_PM.png)
-
-Sample `all_batches_summary_measurements.csv` for a 2-batch analysis produced by code excerpt above.
+<p align="center">
+  <img
+    src="assets/Screenshot_2025-06-24_at_1.59.29_PM.png"
+    alt="Sample all_batches_summary_measurements.csv for a 2-batch analysis"
+    width="60%"
+  />
+</p>
 
 **Q9: How is SMART-AFM is different from SMART-TEM [[link to paper](https://doi.org/10.1007/s10570-022-04818-w)]?**
 
