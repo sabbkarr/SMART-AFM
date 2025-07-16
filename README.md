@@ -214,39 +214,37 @@ PNGs of binary segmented images, i.e., CNC pixels separated from non-CNC pixels 
 ## 4.3. `outputs/grouped_images/`
 
 PNGs of raw images overlaid with colored boundaries by group (`<name>_grouped.png`) with color reference below. 
-
-![Example of a raw image.](assets/Screenshot_2025-06-19_at_12.06.07_AM.png)
-
-Example of a raw image.
-
-![The grayscale, preprocessed image.](assets/1004_height_preprocessed.png)
-
-The grayscale, preprocessed image.
-
-![The segmented image.](assets/1004_height_segmented-2.png)
-
-The segmented image.
-
-![Image with segmentation overlays with grouping-specific colors.](assets/1004_height_segmented.png)
-
-Image with segmentation overlays with grouping-specific colors.
-
-<aside>
-🎨
-
-Color reference:
-
-Magenta: border
-
-red: coarse clusters
-
-orange: laterally stacked
-
-yellow: vertically stacked
-
-green: isolated
-
-</aside>
+<table>
+  <tr>
+    <td width="20%" align="center">
+      <img src="assets/Screenshot_2025-06-19_at_12.06.07_AM.png" alt="Example of a raw image." />
+      <p>Example of a raw image.</p>
+    </td>
+    <td width="20%" align="center">
+      <img src="assets/1004_height_preprocessed.png" alt="The grayscale, preprocessed image." />
+      <p>The grayscale, preprocessed image.</p>
+    </td>
+    <td width="20%" align="center">
+      <img src="assets/1004_height_segmented-2.png" alt="The segmented image." />
+      <p>The segmented image.</p>
+    </td>
+    <td width="20%" align="center">
+      <img src="assets/1004_height_segmented.png" alt="Image with segmentation overlays with grouping-specific colors." />
+      <p>Image with segmentation overlays with grouping-specific colors.</p>
+    </td>
+    <td width="20%" align="left">
+      <aside>
+        🎨  
+        <strong>Color reference:</strong><br/>
+        Magenta: border<br/>
+        red: coarse clusters<br/>
+        orange: laterally stacked<br/>
+        yellow: vertically stacked<br/>
+        green: isolated
+      </aside>
+    </td>
+  </tr>
+</table>
 
 ## 4.4. `outputs/measurements/`
 
