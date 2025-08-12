@@ -73,7 +73,7 @@ While **preparing AFM images**, note that
     smart-afm/data/
     ```
     
-    The code does not recognizes the files inside a sub-folder—drop every file into `data/`. Accepted file extensions are `.txt` , `.png` , `.tiff`, `.tif`, `.jpg`, and `.mat`.
+    The code does not recognizes the files inside a sub-folder—drop every file into `data/`. Accepted file extensions are `.txt` , `.png` , `.tiff`, `.tif`, `.jpg`, and `.mat`. 
     
 - **Keep all `.m` code files** in directory:
     
@@ -170,6 +170,10 @@ That single command will:
     </td>
   </tr>
 </table>
+
+## Quick sanity check (sample data) 
+
+To confirm your setup, run SMART-AFM on the included sample images in `data/`. This folder contains 5 example AFM images sampled from the study by Bushell et al. (2021) [[link to paper](https://doi.org/10.1007/s10570-020-03618-4)]. The resutls folder should be identical to the folder provided in `outputs/`--if the sanity check passes, replace `imageDir` with your own `data/` folder and proceed. If it fails, revisit Configuring MATLAB Path and Defining Parameters, then re-run.
 
 # 4. Result Structure
 
