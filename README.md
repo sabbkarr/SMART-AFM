@@ -1,6 +1,6 @@
 # SMART-AFM Tutorial
 
-[[`SMART-AFM Paper` 📄](https://doi.org/10.1007/s10570-025-06690-w)][`BibTeX`][[`Dataset`](https://doi.org/10.1007/s10570-020-03618-4)]
+[[`SMART-AFM Paper` 📄](https://doi.org/10.1007/s10570-025-06690-w)][[`Dataset`](https://doi.org/10.1007/s10570-020-03618-4)]
 
 [[`SMART Paper 📄`](https://doi.org/10.1007/s10570-020-03668-8)][[`SMART-TEM Paper 📄`](https://doi.org/10.1007/s10570-022-04818-w)]
 
