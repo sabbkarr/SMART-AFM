@@ -1,6 +1,6 @@
 # SMART-AFM Tutorial
 
-[`SMART-AFM Paper` 📄][`BibTeX`][[`Dataset`](https://doi.org/10.1007/s10570-020-03618-4)]
+[[`SMART-AFM Paper` 📄](https://doi.org/10.1007/s10570-025-06690-w)][`BibTeX`][[`Dataset`](https://doi.org/10.1007/s10570-020-03618-4)]
 
 [[`SMART Paper 📄`](https://doi.org/10.1007/s10570-020-03668-8)][[`SMART-TEM Paper 📄`](https://doi.org/10.1007/s10570-022-04818-w)]
 
@@ -13,11 +13,13 @@ For bugs or feature requests, open an issue in the repository or email repositor
 ### Citation
 
 ```latex
-@article{karimi2025smartafm,
-  title={A Semi-automatic Workflow for Atomic Force Microscopy Image Analysis and Cellulose Nanocrystal Particle Size Measurements},
-  author={Karimi, Saba and Yucel, Sezen and Moon, Robert J. and Johnston, Linda J. and Bechle, Nathan J. and Batchelor, Warren and Chof, Jae-Young and Kalidindi, Surya R.},
-  journal={},
-  year={2025}
+@article{karimi2025semi,
+  title={A semi-automatic workflow for atomic force microscopy image analysis and cellulose nanocrystal particle size measurements},
+  author={Karimi, Saba and Yucel, Sezen and Moon, Robert J and Johnston, Linda J and Bechle, Nathan J and Batchelor, Warren and Cho, Jae-Young and Kalidindi, Surya R},
+  journal={Cellulose},
+  pages={1--18},
+  year={2025},
+  publisher={Springer}
 }
 ```
 
@@ -349,7 +351,7 @@ A: Begin by running SMART on a single representative image. This lets you execut
 
 **Q2: How do I validate parameters across multiple images?**
 
-A: After tuning on one image, process a batch of ~10 typical images. Inspect the segmentation, grouping, and CNC identification for each file. Adjust parameters to improve correct identifications and minimize misses (see Yucel [2021](https://doi.org/10.1007/s10570-020-03668-8)/[2022](https://doi.org/10.1007/s10570-022-04818-w), Karimi 2025 for guidance).
+A: After tuning on one image, process a batch of ~10 typical images. Inspect the segmentation, grouping, and CNC identification for each file. Adjust parameters to improve correct identifications and minimize misses (see Yucel [2021](https://doi.org/10.1007/s10570-020-03668-8)/[2022](https://doi.org/10.1007/s10570-022-04818-w), Karimi [2025](https://doi.org/10.1007/s10570-025-06690-w) for guidance).
 
 **Q3: Why might SMART miss or misidentify some CNCs?**
 
